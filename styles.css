@@ -1,0 +1,275 @@
+/* Globale Styles */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #fefefe;
+    color: #424242;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Etwas hellerer Dark Mode für bessere Lesbarkeit */
+.dark-mode {
+    background-color: #424641 !important;
+    color: #f0f0f0 !important;
+}
+
+/* Abgestimmtes Pastell-Grün im Dark Mode */
+.dark-mode .pastel-primary {
+    background-color: #79b88d !important;
+}
+
+/* Header im Dark Mode */
+.dark-mode .modern-header {
+    color: #daffe1 !important;
+}
+
+/* Karten im Dark Mode */
+.dark-mode .card {
+    background-color: #4f524f !important;
+    color: #f0f0f0;
+    border: none;
+}
+
+/* Progressbar im Dark Mode */
+.dark-mode .progress-bar {
+    background-color: #b2dfdb !important;
+}
+
+/* Hauptkalender im Dark Mode */
+.dark-mode .calendar-table {
+    background-color: #4f524f !important;
+}
+.dark-mode .calendar-table thead th {
+    background-color: #79b88d !important;
+    color: #ffffff !important;
+}
+
+/* Abwechselnde Zeilenfarben im Dark Mode, zur besseren Trennung */
+.dark-mode .calendar-table tbody tr:nth-child(even) td {
+    background-color: #5e625e !important;
+}
+.dark-mode .calendar-table tbody tr:hover {
+    background-color: #707470 !important;
+}
+
+/* Mini-Kalender im Dark Mode */
+.dark-mode #miniCalendar th {
+    background-color: #79b88d !important;
+    color: #fff !important;
+}
+
+/* Abwechselnde Spaltenfarben im Mini-Kalender für bessere Erkennbarkeit */
+.dark-mode #miniCalendar td:nth-child(even) {
+    background-color: #5e625e;
+}
+.dark-mode #miniCalendar td:nth-child(even):hover {
+    background-color: #707470;
+}
+.dark-mode #miniCalendar td:hover {
+    color: #fff;
+}
+
+/* Scrollbare Monatsdropdown im Dark Mode */
+.dark-mode .months-dropdown {
+    background-color: #5e625e !important;
+}
+
+.dark-mode .btn-outline-dark {
+    border-color: #b2dfdb !important;
+    color: #b2dfdb !important;
+}
+
+/* Pastell-Grün */
+.pastel-primary {
+    background-color: #81c784;
+}
+
+/* Header */
+.modern-header {
+    font-weight: 700;
+    color: #00796b;
+    letter-spacing: 0.5px;
+}
+
+/* Container */
+.container-fluid {
+    padding: 20px;
+}
+
+/* Hauptkalender */
+.calendar-table {
+    border-radius: 4px;
+    background-color: #ffffff;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+    overflow: hidden;
+    transition: all 0.3s ease;
+    margin-bottom: 20px;
+}
+
+.calendar-table table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 0;
+}
+
+.calendar-table thead th {
+    background-color: #81c784;
+    color: #fff;
+    font-weight: 500;
+    padding: 10px;
+    border: none;
+    text-align: center;
+    font-size: 0.95rem;
+}
+
+/* Abwechselnde Zeilenfarben im Light Mode */
+.calendar-table tbody tr:nth-child(even) td {
+    background-color: #fafafa;
+}
+
+.calendar-table tbody tr:hover {
+    background-color: #f1f8ff;
+    cursor: pointer;
+}
+
+/* KW-Zeile */
+.week-header-row {
+    background-color: #e8f5e9;
+    font-weight: 600;
+    text-align: left;
+    color: #00897b;
+    transition: background-color 0.2s ease;
+}
+.week-header {
+    font-size: 0.9rem;
+    padding: 8px;
+}
+
+/* Aktuelle KW hervorheben */
+.current-week {
+    background-color: #fff9c4;
+    font-weight: bold;
+}
+
+/* Zusammenfassungskarte */
+.card {
+    border: none;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.card-header {
+    font-weight: 500;
+    font-size: 1rem;
+    border-radius: 0;
+    border: none;
+}
+
+/* Sticky-Zusammenfassung */
+.sticky-summary {
+    position: sticky;
+    top: 20px;
+    z-index: 10;
+}
+
+.clear-btn {
+    background-color: #ff5252;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    padding: 2px 8px;
+    cursor: pointer;
+    font-size: 0.8rem;
+}
+.clear-btn:hover {
+    background-color: #d32f2f;
+}
+
+/* Inputs */
+/* Im Dark Mode sind die Inputs jetzt grau, nicht weiß */
+.time-input, .notes-input {
+    width: 90%;
+    padding: 5px;
+    border: 1px solid #ced4da;
+    border-radius: 3px;
+    margin-bottom: 4px;
+    font-size: 0.85rem;
+    transition: box-shadow 0.2s ease;
+}
+
+.time-input {
+    background-color: #fafafa;
+}
+
+.notes-input {
+    background-color: #fafafa;
+}
+
+.dark-mode .time-input,
+.dark-mode .notes-input {
+    background-color: #6b6f6b;
+    border-color: #bbb;
+    color: #f0f0f0;
+}
+
+.time-input:focus, .notes-input:focus {
+    border-color: #81c784;
+    outline: none;
+    box-shadow: 0 0 4px rgba(129, 199, 132, 0.5);
+}
+
+/* Mini-Kalender (unten rechts) */
+.mini-calendar-card {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 320px;
+    max-height: 420px;
+    overflow-y: auto;
+    border-radius: 4px;
+    border: none;
+}
+
+.mini-calendar-card .card-header {
+    font-size: 0.95rem;
+    color: #fff;
+    border: none;
+}
+
+/* Gitter Mini-Kalender */
+#miniCalendar table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+#miniCalendar th {
+    background-color: #e8f5e9;
+    padding: 6px;
+    font-weight: 500;
+    border: 1px solid #e0e0e0;
+    font-size: 0.85rem;
+}
+
+#miniCalendar td {
+    text-align: center;
+    padding: 6px;
+    border: 1px solid #e0e0e0;
+    cursor: pointer;
+    font-size: 0.8rem;
+}
+
+/* Abwechselnde Zeilenfarben */
+#miniCalendar tbody tr:nth-child(even) td {
+    background-color: #fafafa;
+}
+
+#miniCalendar td:hover {
+    background-color: #f1f8ff;
+}
+
+/* Scrollbare Monatsdropdown */
+.months-dropdown {
+    max-height: 200px;
+    overflow-y: auto;
+}
